@@ -1,3 +1,9 @@
 {
-    "cSpell.words": ["cclear", "gulpfile", "linebreak", "nanospinner"]
+    "cSpell.words": [
+        "cclear",
+        "commitlint",
+        "gulpfile",
+        "linebreak",
+        "nanospinner"
+    ]
 }

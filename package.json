@@ -13,15 +13,21 @@
         "cclear": "dist/bin/cclear.js"
     },
     "scripts": {
-        "lint": "eslint --ext .ts .",
-        "lint:fix": "eslint --ext .ts . --fix",
-        "format": "prettier --ignore-path .gitignore --write \"**/*.+(ts|json)\"",
+        "lint:ts": "eslint --ext \".ts\" --ignore-path .gitignore .",
+        "lint:prettier": "prettier --check .",
+        "lint:all": "npm run lint:ts && npm run lint:prettier",
+        "lint:fix": "prettier --write \"**/*.+(ts|json)\" --list-different . && npm run lint:js --fix",
+        "prepare": "husky install",
         "build": "rm -rf dist && tsc",
         "start": "node dist/bin/cclear.js"
     },
+    "lint-staged": {
+        "*.{ts}": "eslint --cache",
+        "*.**": "prettier --check --ignore-unknown"
+    },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run lint && npm run format && npm run build"
+            "pre-commit": "npm run lint:all && npm run build"
         }
     },
     "keywords": [
@@ -41,6 +47,8 @@
         "nanospinner": "^1.0.0"
     },
     "devDependencies": {
+        "@commitlint/cli": "^16.2.3",
+        "@commitlint/config-conventional": "^16.2.1",
         "@types/chalk": "^2.2.0",
         "@types/chalk-animation": "^1.6.1",
         "@types/figlet": "^1.5.4",
