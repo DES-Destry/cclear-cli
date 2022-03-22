@@ -3,5 +3,11 @@ export class CliConfig {
     public static readonly SupportedPlatforms = ['darwin'];
     public static readonly CurrentPlatform = process.platform;
 
-    public static readonly AvailableCleaners = ['System', 'Docker', 'Nuget', 'Npm', 'VSCode'];
+    public static readonly AvailableCleaners = [
+        'System',
+        'Docker',
+        'Nuget',
+        'Npm',
+        'VSCode',
+    ];
 }

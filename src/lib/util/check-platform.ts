@@ -1,5 +1,5 @@
-import chalk from "chalk";
-import { CliConfig } from "../config/cli.config.js";
+import chalk from 'chalk';
+import { CliConfig } from '../config/cli.config.js';
 
 export class CheckPlatform {
     public start(): void {
@@ -11,9 +11,11 @@ export class CheckPlatform {
 
     private showMessage(): void {
         console.log(
-            chalk.bgRed("Your operating system are not supported by CCLEAR =(")
+            chalk.bgRed('Your operating system are not supported by CCLEAR =('),
         );
-        console.log(`Supported OS: ${chalk.green(CliConfig.SupportedPlatforms)}`);
+        console.log(
+            `Supported OS: ${chalk.green(CliConfig.SupportedPlatforms)}`,
+        );
         console.log(`Current OS: ${CliConfig.CurrentPlatform}`);
     }
 }

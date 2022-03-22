@@ -11,6 +11,7 @@ async function main() {
         message: 'What kind of cache do you want to clean?',
         choices: CliConfig.AvailableCleaners,
     });
+    console.trace(selectedCleaners);
 }
 
 new CheckPlatform().start();
