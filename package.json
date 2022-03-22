@@ -1,0 +1,26 @@
+{
+  "name": "cclear",
+  "version": "0.0.1",
+  "description": "Clear cache of common and development apps with one command",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "exec": "node ."
+  },
+  "keywords": [
+    "cli",
+    "cache",
+    "util",
+    "tools",
+    "macos"
+  ],
+  "author": "Destry.Unimaster <dev.andrey.kirik@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "chalk-animation": "^1.6.0",
+    "figlet": "^1.5.2",
+    "inquirer": "^8.2.1",
+    "nanospinner": "^1.0.0"
+  }
+}
