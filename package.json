@@ -19,6 +19,11 @@
         "build": "rm -rf dist && tsc",
         "start": "node dist/bin/cclear.js"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint && npm run format && npm run build"
+        }
+    },
     "keywords": [
         "cli",
         "cache",
@@ -45,6 +50,7 @@
         "@typescript-eslint/parser": "^5.16.0",
         "eslint": "^8.11.0",
         "eslint-config-prettier": "^8.5.0",
+        "husky": "^7.0.4",
         "prettier": "^2.6.0",
         "ts-loader": "^9.2.8",
         "ts-node": "^10.7.0"
