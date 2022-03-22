@@ -1,5 +1,5 @@
 import chalk from "chalk";
-import { CliConfig } from "../config/cli.config";
+import { CliConfig } from "../config/cli.config.js";
 
 export class CheckPlatform {
     public start(): void {

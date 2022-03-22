@@ -10,10 +10,11 @@
     "node": ">= 14.0.0"
   },
   "bin": {
-    "cclear": "bin/cclear.js"
+    "cclear": "dist/bin/cclear.js"
   },
   "scripts": {
-    "exec": "node ."
+    "build": "rm -rf dist && tsc",
+    "start": "node dist/bin/cclear.js"
   },
   "keywords": [
     "cli",
