@@ -16,7 +16,7 @@
         "lint:ts": "eslint --ext \".ts\" --ignore-path .gitignore .",
         "lint:prettier": "prettier --check .",
         "lint:all": "npm run lint:ts && npm run lint:prettier",
-        "lint:fix": "prettier --write \"**/*.+(ts|json)\" --list-different . && npm run lint:js --fix",
+        "lint:fix": "prettier --write \"**/*.+(ts|json)\" --list-different . && npm run lint:ts --fix",
         "prepare": "husky install",
         "build": "rm -rf dist && tsc",
         "start": "node dist/bin/cclear.js"
